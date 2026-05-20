@@ -6,74 +6,96 @@
 }
 
 body {
-  background-color: #f4f4f4;
-  padding: 20px;
+  background: #eef2f7;
+  padding: 30px;
   color: #333;
 }
 
+/* TÍTULO */
+
 h1 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: #222;
+  font-size: 36px;
 }
 
 /* CONTROLES */
 
 .controls {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+
   display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .controls input,
 .controls select,
 .controls button {
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.controls input,
+.controls select {
+  flex: 1;
 }
 
 .controls button {
-  background-color: #4f46e5;
+  background: #4f46e5;
   color: white;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .controls button:hover {
-  background-color: #3730a3;
+  background: #3730a3;
 }
 
-/* LISTA DE PRODUTOS */
+/* GRID */
 
 #product-list {
+  max-width: 1200px;
+  margin: auto;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 /* CARD */
 
 .card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 15px;
-  border: 1px solid #ddd;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
   transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
+
+/* IMAGEM */
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+}
+
+/* CONTEÚDO */
+
+.card-content {
+  padding: 18px;
 }
 
 .card h3 {
@@ -83,17 +105,22 @@ h1 {
 
 .card p {
   margin-bottom: 8px;
+  color: #555;
 }
 
-/* BOTÕES DOS CARDS */
+/* BOTÕES */
 
 .card button {
-  padding: 8px 10px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-right: 5px;
+
+  padding: 10px 12px;
+
+  border: none;
+  border-radius: 8px;
+
   cursor: pointer;
+
   transition: 0.2s;
 }
 
@@ -104,11 +131,17 @@ h1 {
 /* DETALHES */
 
 #product-details {
-  margin-top: 30px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
+  max-width: 1200px;
+
+  margin: 35px auto 0 auto;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 #product-details h2 {
@@ -118,6 +151,5 @@ h1 {
 /* DESTAQUE */
 
 .highlight {
-  border: 2px solid #f59e0b;
-  background-color: #fff7e6;
-}
+  border: 3px solid #f59e0b;
+}  
